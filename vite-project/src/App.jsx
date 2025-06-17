@@ -10,7 +10,6 @@ const dummyProductData = ["Product 1", "Product 2", "product 3"];
 function App() {
   return (
     <div>
-      <h4>App Component</h4>
       {/* <FunctionalComponent />
       <ArrowFunction /> */}
       <ProductList
