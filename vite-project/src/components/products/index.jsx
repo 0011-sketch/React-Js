@@ -7,13 +7,24 @@ import "./style.css";
 function ProductList({ name, city, ListOfProducts }) {
   //   const { name, city } = props;
   //   console.log(name);
+
+const flag = false;
+
+ 
+ 
+
   return (
     <div>
       <h3 className="title">Ecommerce Project</h3>
       {/* <ProductItem /> */}
-      <h4>
+      {/* terinary operator we need to use the curly brases  beacouse it is a dynamic values */}
+
+      {
+        flag? <h4>
         Name is {name} he is from belongs to city {city}
-      </h4>
+      </h4>:<h4>Hello</h4>
+      }
+     
       <ul>
         {ListOfProducts.map((item, index) => (
           <ProductItem singleProductItem={item} key={index} />
