@@ -8,9 +8,13 @@ function ProductList({ name, city, ListOfProducts }) {
   //   const { name, city } = props;
   //   console.log(name);
 
-const flag = false;
+const flag = true;
 
- 
+ function renderTextBlock(getFlag){
+  return getFlag? <h4>
+        Name is {name} he is from belongs to city {city}
+      </h4>:<h4>Hello</h4>
+ }
  
 
   return (
@@ -19,11 +23,7 @@ const flag = false;
       {/* <ProductItem /> */}
       {/* terinary operator we need to use the curly brases  beacouse it is a dynamic values */}
 
-      {
-        flag? <h4>
-        Name is {name} he is from belongs to city {city}
-      </h4>:<h4>Hello</h4>
-      }
+      {renderTextBlock(flag)}
      
       <ul>
         {ListOfProducts.map((item, index) => (
